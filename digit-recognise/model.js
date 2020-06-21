@@ -1,6 +1,15 @@
 import * as tf from '@tensorflow/tfjs';
 
-const model = tf.loadLayersModel('probmnist2.json');
+
+
+async function loadModel() {
+    const model = await tf.loadLayersModel('probmnist2.json');
+
+
+
+
+}
+
 
 var img = new Image(28,28)
 img.src = 'Four.png';
