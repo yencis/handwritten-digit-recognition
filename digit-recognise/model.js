@@ -1,4 +1,4 @@
-import * as tf from "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js";
+import * as tf from '@tensorflow/tfjs';
 
 const model = tf.loadLayersModel('probmnist2.json');
 
