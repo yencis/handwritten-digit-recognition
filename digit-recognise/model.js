@@ -1,9 +1,7 @@
-import * as tf from '@tensorflow/tfjs';
+import * as tfl from '@tensorflow/tfjs-layers';
 
-
-
-async function loadModel() {
-    const model = await tf.loadLayersModel('probmnist2.json');
+async function loadProbabilityModel() {
+    const model = await tfl.loadLayersModel('probmnist2.json');
 
 
 
