@@ -6,7 +6,7 @@ async function loadProbabilityModel() {
     return model
 }
 
-var probabilityModel = loadProbabilityModel()
+(async()=>{let probabilityModel = await loadProbabilityModel()});
 var img = new Image(28,28)
 img.src = 'Four.png';
 document.body.append(img)
