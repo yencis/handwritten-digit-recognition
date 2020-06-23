@@ -1,7 +1,6 @@
 function toGrayScale() {
     let i;
     let data = exportData().data
-    console.log(data.data)
     let gData = Array(28)
     let c = 0
 

@@ -42,7 +42,10 @@ function mouseMove(e) {
 }
 
 function exportData() {
-    let data = ctx.getImageData(0,0,28,28);
+    let data = ctx.getImageData(0,0,280,280);
     console.log(data);
+    data.height = 28;
+    data.width = 28;
+    console.log(data)
     return data
 }
