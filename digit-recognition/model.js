@@ -12,15 +12,5 @@ async function recognise() {
     let data = res.dataSync()
     console.log(res);
 
-
-    let counter = 0, maxprob = 0, output;
-    while (counter < 10) {
-        if (data[counter] > maxprob) {
-            maxprob = data[counter];
-            output = counter;
-        }
-
-        counter++;
-    }
-    answer.innerText = output;
+    answer.innerText = data.indexOf(Math.max(...data));
 }
