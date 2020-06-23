@@ -16,7 +16,7 @@ function toGrayScale() {
         }
     }
 
-    // TODO: fix scuffed toGrayScale
+    // TODO: fix(ed) scuffed toGrayScale
     let newArr = [];
     for (i = 0; i < gData.length; i++) {
         newArr = newArr.concat(gData[i]);
@@ -26,9 +26,8 @@ function toGrayScale() {
 }
 */
 function toGrayScale(){
-    let i=exportData().data
-    let a=Array(784)
-    for(u=0;u<3136;u+=4)a[u/4]=i[u]/255
+    i=exportData().data
+    for(a=[],u=0;u<3136;u+=4)a.push(i[u]/255)
     return a
 }
 
