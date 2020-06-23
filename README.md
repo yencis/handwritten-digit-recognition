@@ -1,6 +1,6 @@
 # Handwritten Digit Recognition Web App
 
-Web app made by Tensorflow.js and trained on Keras/Tensorflow; backend is JS
+Web app made on Tensorflow.js and trained on Keras/Tensorflow; backend is JS
 
 TODO: 
 - user input
@@ -12,4 +12,4 @@ TODO:
 
 
 
-Made by: yencis and albert dongus from mysticwokrs.xyz
+Made by: yencis and albert from mysticworks.xyz
