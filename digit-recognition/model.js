@@ -1,4 +1,5 @@
 const answer = document.getElementById('answer');
+const confidence = document.getElementById('confidence');
 
 function toGrayScale() {
     i = exportData().data;
@@ -12,5 +13,6 @@ async function recognise() {
     let data = res.dataSync()
     console.log(res);
 
-    answer.innerText = (data.indexOf(Math.max(...data)) + " "+ Math.max(...data));
+    answer.innerText = data.indexOf(Math.max(...data));
+    confidence.innerText = Math.max(...data);
 }
