@@ -42,6 +42,7 @@ function mouseMove(e) {
 }
 
 function exportData() {
-    const data = ctx.getImageData(0,0,28,28);
+    let data = ctx.getImageData(0,0,28,28);
     console.log(data);
+    return data
 }

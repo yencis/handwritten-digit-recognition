@@ -1,6 +1,7 @@
 function toGrayScale() {
     let i;
-    let data = exportData()
+    let data = exportData().data
+    console.log(data.data)
     let gData = Array(28)
     let c = 0
 
@@ -10,6 +11,7 @@ function toGrayScale() {
         //checks if c is a multiple of 112 and not 0
         for (; !(c - s) || (c % 112); c += 4) {
             //if not 0 is 255
+            console.log(data[c])
             gData[i].push(data[c] / 255)
         }
     }
