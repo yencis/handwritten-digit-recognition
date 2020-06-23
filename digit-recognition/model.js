@@ -14,5 +14,5 @@ async function recognise() {
     console.log(res);
 
     answer.innerText = data.indexOf(Math.max(...data));
-    confidence.innerText = Math.max(...data);
+    confidence.innerText = (Math.max(...data) * 100).toFixed(3) + "%";
 }
