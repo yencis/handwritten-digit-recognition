@@ -1,11 +1,11 @@
-#guidiv{
+#guidiv {
     display: flex;
     justify-content: space-evenly;
     width: 28px;
     height: 28px;
 }
 
-#canvas{
+#canvas {
     width: 28px;
     height: 28px;
     flex-wrap: wrap;
