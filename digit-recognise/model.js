@@ -1,14 +1,16 @@
 //import * as tfl from '@tensorflow/tfjs-layers';
 //import * as tf from '@tensorflow/tfjs';
 
-let probabilityModel
+
+//let probabilityModel
+
 
 async function loadProbabilityModel() {
-    let model = await tf.loadLayersModel('probmnist2.json');
+    let model = await tf.loadLayersModel('http://127.0.0.1:8080/probmnist2.json');
     return model
 }
 
-(async()=>{probabilityModel = await loadProbabilityModel()});
+//probabilityModel = loadProbabilityModel();
 let img = new Image(28,28)
 img.src = 'Four.png';
 console.log(img)
@@ -40,17 +42,22 @@ function toGrayScale(){
         //checks if c is a multple of 112 and not 0
         for(;!(c-s)||(c%112);c+=4){
             //if not 0 is 255
-            gData[i].push([data[c]/255.0])
+            gData[i].push(data[c]/255.0)
+            //gData[i].push([data[c]/255.0])
         }
     }
     return gData
 }
 
-function recognise(){
+async function recognise(){
+    //let probabilityModel = await tf.loadLayersModel('http://127.0.0.1:8080/probmnist2.json');
+    let probabilityModel = await tf.loadLayersModel('../model_folder/probmnist2.json');
+    console.log(probabilityModel)
     let gData = toGrayScale()
-    gData = [gData]
-    let res = probabilityModel.predict([gData])[0]
-    console.log(res)
+    //gData = [gData]
+    let res = probabilityModel.predict(tf.tensor([gData]))
+    console.log(res.array())
+    return res
 }
 
 function convertImage(img){
