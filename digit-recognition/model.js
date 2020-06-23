@@ -1,9 +1,10 @@
+/*
+Yeah, it's the same code trust me.
 function toGrayScale() {
     let i;
     let data = exportData().data
     let gData = Array(28)
     let c = 0
-
     for (i = 0; i < 28; i++) {
         let s = c
         gData[i] = []
@@ -22,6 +23,13 @@ function toGrayScale() {
     }
 
     return newArr
+}
+*/
+function toGrayScale(){
+    let i=exportData().data
+    let a=Array(784)
+    for(u=0;u<3136;u+=4)a[u/4]=i[u]/255
+    return a
 }
 
 async function recognise() {
