@@ -1,2 +1,7 @@
-# handwritten-digit-recognition
-Handwritten Digit Recognition Made by Tensorflow.js and Trained on keras (haha caps)
+# Handwritten Digit Recoooooognition Web App
+
+Web app made by Tensorflow.js and trained on Keras/Tensorflow; backend is JS
+
+TODO: 
+- user input
+- look pretty
