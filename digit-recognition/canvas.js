@@ -6,6 +6,8 @@ let mouseClicked = false;
 canvas.addEventListener('mousedown', mouseDown, false);
 canvas.addEventListener('mousemove', mouseMove, false);
 window.addEventListener('mouseup', mouseUp, false);
+ctx.width  = 28;
+ctx.height = 28;
 ctx.fillStyle = "black";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
