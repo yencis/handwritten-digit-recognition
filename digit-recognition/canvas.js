@@ -13,10 +13,10 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 function drawPixel(ctx, x, y) {
     let pixel = ctx.getImageData(x, y, 28, 28);
-    pixel.data[0] = 0;
-    pixel.data[1] = 0;
-    pixel.data[2] = 0;
-    pixel.data[3] = 0;
+    pixel.data[0] = 255;
+    pixel.data[1] = 255;
+    pixel.data[2] = 255;
+    pixel.data[3] = 255;
     ctx.putImageData(pixel, x, y);
 }
 
@@ -44,10 +44,7 @@ function mouseMove(e) {
 }
 
 function exportData() {
-    let data = ctx.getImageData(0,0,280,280);
-    console.log(data);
-    data.height = 28;
-    data.width = 28;
+    let data = ctx.getImageData(0,0,28,28);
     console.log(data)
     return data
 }
