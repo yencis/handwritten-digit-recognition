@@ -1,7 +1,4 @@
 #guidiv{
-    /*
-    Because albert dong is scared of flex box
-    */
     display: flex;
     justify-content: space-evenly;
     width: 280px;
@@ -12,5 +9,4 @@
     width: 280px;
     height: 280px;
     flex-wrap: wrap;
-    background: black;
 }

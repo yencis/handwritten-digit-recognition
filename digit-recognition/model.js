@@ -1,15 +1,6 @@
-function drawImage() {
-    let img = new Image(28, 28)
-    img.src = 'Four.png';
-    let context = document.getElementById('canvas').getContext('2d');
-    console.log(context)
-    context.drawImage(img, 20, 20);
-    return context.getImageData(20, 20, 28, 28).data
-}
-
 function toGrayScale() {
     let i;
-    let data = drawImage()
+    let data = exportData()
     let gData = Array(28)
     let c = 0
 
@@ -19,7 +10,7 @@ function toGrayScale() {
         //checks if c is a multiple of 112 and not 0
         for (; !(c - s) || (c % 112); c += 4) {
             //if not 0 is 255
-            gData[i].push(data[c] / 255.0)
+            gData[i].push(data[c] / 255)
         }
     }
 
