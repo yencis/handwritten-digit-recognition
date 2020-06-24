@@ -20,7 +20,7 @@ function drawPixel(ctx, x, y) {
     ctx.putImageData(pixel, x, y);
 }
 
-function clear(canvas, ctx) {
+function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
