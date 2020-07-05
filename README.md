@@ -2,10 +2,6 @@
 
 Web app made on Tensorflow.js and trained on Keras/Tensorflow; backend is JS
 
-TODO: 
-- user input
-- look pretty
-
 
 
 
